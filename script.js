@@ -1,5 +1,6 @@
 import { words } from "./words.js";
-console.log(words)
+
+const randomWord = words[Math.floor(Math.random() * words.length)];
 
 const keys = document.querySelectorAll(".kbd");
 const textbox = document.getElementById("textbox");
@@ -11,7 +12,7 @@ const definitionContainer = document.getElementById("definition");
 // Function to fetch a random definition from the API
 async function fetchRandomDefinition() {
 	const word = "horse";
-	const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+	const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${randomWord}`;
 
 	try {
 		const response = await fetch(url);
