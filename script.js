@@ -75,6 +75,14 @@ function handleClear() {
 	textbox.innerHTML = "";
 }
 
+function handleSubmit() {
+	const currentGuess = textbox.innerHTML;
+	console.log(currentGuess, randomWord)
+	if (currentGuess === randomWord) {
+		window.alert("Nice job!")
+	}
+}
+
 keys.forEach((key) => {
 	const keyLetter = key.textContent.toLowerCase();
 	key.setAttribute("data-key", keyLetter);
@@ -93,6 +101,7 @@ document.addEventListener("keydown", (event) => {
 // button event listeners
 deleteButton.addEventListener("click", handleDelete);
 clearButton.addEventListener("click", handleClear);
+submitButton.addEventListener("click", handleSubmit);
 
 // Add click listeners for each key
 addClickListenersToKeys();
