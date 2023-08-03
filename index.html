@@ -14,7 +14,15 @@
 	<div id="app">
 		<div id="title" class="text-center text-primary text-2xl font-bold">GUESS THE WORD</div>
 
-		<div id="definition" class="border-2 rounded w-3/6 h-40 m-auto flex justify-center items-center p-10"></div>
+		<div id="alert-box" class="alert alert-success hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+					d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+			</svg>
+			<span>Great job!</span>
+		</div>
+
+		<div id="definition" class="text-sm border-2 rounded w-3/6 h-40 m-auto flex justify-center items-center p-10"></div>
 
 		<div class="flex justify-center gap-1 my-1 w-full">
 			<kbd class="kbd">q</kbd>
@@ -52,7 +60,7 @@
 	</div>
 
 	<div id="text-container">
-		<div id="textbox" type="text" class="input input-bordered w-full max-w-xs">
+		<div id="textbox" type="input" class="input input-bordered w-full max-w-xs">
 		</div>
 		<button id="delete-btn" class="btn">Delete</button>
 		<button id="clear-btn" class="btn">Clear</button>

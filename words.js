@@ -10,6 +10,8 @@ export const words = [
 	"ancient",
 	"marry",
 	"multiple",
-	"show"
+	"show",
+	"daze",
+	"empty"
 ];
 

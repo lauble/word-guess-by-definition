@@ -8,6 +8,7 @@ const deleteButton = document.getElementById("delete-btn");
 const submitButton = document.getElementById("submit-btn");
 const clearButton = document.getElementById("clear-btn");
 const definitionContainer = document.getElementById("definition");
+const alertBox = document.getElementById("alert-box");
 
 // Function to fetch a random definition from the API
 async function fetchRandomDefinition() {
@@ -75,11 +76,12 @@ function handleClear() {
 	textbox.innerHTML = "";
 }
 
-function handleSubmit() {
+function handleSubmit(event) {
+	event.preventDefault();
 	const currentGuess = textbox.innerHTML;
 	console.log(currentGuess, randomWord)
 	if (currentGuess === randomWord) {
-		window.alert("Nice job!")
+		alertBox.classList.remove("hidden");
 	}
 }
 
@@ -101,7 +103,7 @@ document.addEventListener("keydown", (event) => {
 // button event listeners
 deleteButton.addEventListener("click", handleDelete);
 clearButton.addEventListener("click", handleClear);
-submitButton.addEventListener("click", handleSubmit);
+submitButton.addEventListener("submit", handleSubmit);
 
 // Add click listeners for each key
 addClickListenersToKeys();
