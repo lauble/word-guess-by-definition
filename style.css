@@ -3,6 +3,10 @@ html {
 	width: 100%;
 }
 
+body {
+	padding: 20px;
+}
+
 .kbd:active {
 	scale: 0.90;
 	background-color: lightgray;
